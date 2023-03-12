@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>Test Driving</title>
+  <!--  --------- IMPORTED LIBRARIES  ------>
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <!----------AFRAME LIBRARY CAN BE USED TO CREAT 3D WEB PAGES---------->
+  <script src="./Drive.js"></script>
+  <script src="./Game.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  
+</head>
+
+<body>
+  <a-scene>
+    <!-- Creating scene -->
+    <a-sky src="vr road.jpg" rotation="0 -90 0"></a-sky>
+
+
+
+    <!--  --------- SHAPES  --------- -->
+
+    <!-- There's a few more of shapes you can use.
+          I'll leave it here with the respective dodumentation links for you to check out:
+<a-circle> : https://aframe.io/docs/0.6.0/primitives/a-circle.html
+<a-triangle> : https://aframe.io/docs/0.6.0/primitives/a-triangle.html
+<a-torus>:
+https://aframe.io/docs/0.6.0/primitives/a-torus.html
+<a-torus-knot>: https://aframe.io/docs/0.6.0/primitives/a-torus-knot.html
+      -->
+
+    <!--camera and cursor-->
+    <a-entity id="camera-rig" movement-controls="speed:0.5" drive game="play">
+
+
+      <a-entity id="camera" camera position="0 1.6 0" rotation="0 0 0" look-controls="pointerLockEnabled: false" wasd-controls>
+        <a-ring id="control-wheel" position="0.0 -0.9 -1" color="black" radius-inner="0.5" radius-outer="0.9"></a-ring>
+      </a-entity>
+    </a-entity>
+
+
+
+  </a-scene>
+  <!-- Closing scene -->
+</body>
+
+</html>
